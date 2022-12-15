@@ -1,0 +1,23 @@
+{
+  "name": "todo-app",
+  "description": "This app is build to learn the mern stack and also I'm trying use a clean folder structure, this project is divided into a `client` with vite and react and a `server` with express and mongo",
+  "scripts": {
+    "lint": "standard",
+    "lint:fix": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristianqsanchez/todo-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cristianqsanchez/todo-app/issues"
+  },
+  "homepage": "https://github.com/cristianqsanchez/todo-app#readme",
+  "devDependencies": {
+    "eslint": "^8.29.0",
+    "standard": "^17.0.0"
+  }
+}
