@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export default function useTaskProps({ task }) {
+export default function useTaskProps ({ task }) {
   const [taskProps, setTaskProps] = useState({
     _id: task._id,
     title: task.title,

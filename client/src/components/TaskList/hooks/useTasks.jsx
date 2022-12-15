@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import fetchTasks from '../services/fetchTasks'
 
-export default function useTasks() {
+export default function useTasks () {
   const [tasks, setTasks] = useState([])
 
   useEffect(() => {
