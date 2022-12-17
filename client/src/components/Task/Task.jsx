@@ -11,8 +11,8 @@ export default function Task ({ task }) {
         <input type='text' defaultValue={taskProps.title} onChange={handleTitle} className={styles.title} />
         <input type='text' defaultValue={taskProps.description} onChange={handleDescription} />
       </div>
-      <button onClick={handleDone}>{JSON.stringify(taskProps.done)}</button>
-      <button onClick={() => patchTask({ taskProps })}>submit</button>
+      <input id='input' type='checkbox' defaultChecked={taskProps.done} onClick={handleDone} className={styles.checkBox} />
+      <button onClick={() => patchTask({ taskProps })}>Ok</button>
     </article>
   )
 }

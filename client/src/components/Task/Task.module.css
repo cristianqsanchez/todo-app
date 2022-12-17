@@ -2,13 +2,22 @@
   display: flex;
   gap: 0.6rem;
   padding: 0.6rem;
+  align-items: center;
   background: #393e46;
   border-radius: 0.6rem;
+  min-height: 4rem;
 }
 
 .title {
   font-weight: 600;
   border-bottom: 1px solid;
+}
+
+.checkBox {
+  cursor: pointer;
+  accent-color: #4ade80;
+  min-width: 1.6rem;
+  min-height: 1.6rem;
 }
 
 @media (prefers-color-scheme: light) {
