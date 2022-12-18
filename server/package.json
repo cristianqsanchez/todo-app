@@ -4,11 +4,19 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch src/index.js"
+    "dev": "NODE_ENV=development node --watch src/index.js",
+    "test": "NODE_ENV=test NODE_OPTIONS=--experimental-vm-modules jest --verbose --testTimeout=5000"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^6.7.4"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "supertest": "^6.3.3"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
