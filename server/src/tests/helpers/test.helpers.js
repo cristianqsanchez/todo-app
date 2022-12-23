@@ -14,3 +14,8 @@ export const initialTasks = [
     done: true
   }
 ]
+
+export const getTasks = async () => {
+  const response = await api.get('/')
+  return response.body
+}
