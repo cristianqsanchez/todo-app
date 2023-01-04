@@ -7,7 +7,7 @@ const UserSchema = Schema(
     tasks: [{ type: Schema.Types.ObjectId, ref: 'tasks' }]
   },
   {
-    versionkey: false
+    versionKey: false
   }
 )
 
