@@ -19,3 +19,8 @@ export const getTasks = async () => {
   const response = await api.get('/')
   return response.body
 }
+
+export const getUsers = async () => {
+  const response = await api.get('/users')
+  return response.body
+}
