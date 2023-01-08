@@ -18,15 +18,14 @@ afterEach(async () => {
 
 describe('create a new user', () => {
   test('fresh user', async () => {
+    const initialUsers = await getUsers()
     const newUser = { username: 'some user', password: 'some password' }
     await api
       .post('/users')
       .send(newUser)
       .expect(201)
-      .expect('Content-Type', /application\/json/)
-
-    const usersList = await getUsers()
-    expect(usersList).toHaveLength(usersList.length + 1)
+    const endUsers = await getUsers()
+    expect(endUsers).toHaveLength(initialUsers.length + 1)
   })
   test('username already taken', async () => {
     const initialUsers = await getUsers()
@@ -36,7 +35,6 @@ describe('create a new user', () => {
       .send(newUser)
       .expect(409)
     const endUsers = await getUsers()
-    console.log(endUsers.length)
     expect(endUsers).toHaveLength(initialUsers.length)
   })
 })

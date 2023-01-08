@@ -12,5 +12,5 @@ export const createUser = async (req, res) => {
   const passwordHash = await bcrypt.hash(password, saltRounds)
   const user = userModel({ username, password: passwordHash })
   await user.save()
-  return res.send()
+  return res.status(201).send()
 }
